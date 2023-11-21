@@ -1,0 +1,459 @@
+:root
+{
+	--page_title_color: #ccc;
+	--h2_color: white;
+	--h4_color: rgb(255,206,0);
+	--food_block_description: #ccc;
+}
+*
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+}
+body.background_1
+{
+	background-color: #222;
+	background-image: url("../_files_img/background_pattern.png");
+}
+
+#general_container
+{	
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	max-width: 800px;
+	width: 100%;
+}
+
+nav
+{
+	background-color: #111;
+	padding: 0 15px;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.menu,
+.submenu
+{
+	list-style-type: none;
+}
+
+.logo
+{
+	/*font-size: 20px;*/
+	padding: 7.5px 10px 7.5px 0;
+}
+
+.item
+{
+	padding: 10px;
+}
+
+.item.button
+{
+	padding: 9px 5px;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after
+{
+	color: #ccc;
+}
+
+#page_title
+{
+	color: var(--page_title_color);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	margin-bottom: 10px;
+}
+
+h2
+{
+	color: var(--h2_color);
+	font-family: "Metropolis", "Inter", sans-serif;
+	font-size: 36px;
+	font-weight: 800;
+	margin: 30px 0 15px;
+}
+
+
+.food_block
+{
+	/*background-color: #222;*/
+	border-top: 1px dashed rgba(255, 255, 255, 0.15);
+	/*border-bottom: 1px dashed rgba(255, 255, 255, 0.15);*/
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px 0;
+}
+
+.food_block .main_layout
+{
+	/*background-color: #999;*/
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.food_block .main_layout .text_and_illustration
+{
+	order: 1;
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.food_block .main_layout .text_and_illustration .text
+{
+	/*background: #888;*/
+	flex-basis: 65%;
+	flex-shrink: 1;
+	flex-grow: 1;
+	order: 1;
+}
+
+.food_block .main_layout .text_and_illustration .text h4
+{
+	color: var(--h4_color);
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.food_block .main_layout .text_and_illustration .text p.description
+{
+	color: var(--food_block_description);
+	font-size: 18px;
+	font-weight: 400;
+	margin-top: 5px;
+	line-height: 1.35;
+}
+
+.food_block .main_layout .text_and_illustration .illustration
+{
+	flex-basis: 35%;
+	flex-shrink: 1;
+	flex-grow: 1;
+	order: 2;
+}
+
+.food_block .main_layout .text_and_illustration .illustration img
+{
+	display: block;
+	border-radius: 4px;
+	margin: auto;
+	width: 100%;
+	max-width: 100px;
+}
+
+.food_block .main_layout .prices
+{
+	flex-basis: 100%;
+	order: 2;
+	display: flex;
+	gap: 30px;
+	padding: 5px 0;
+}
+
+.food_block .main_layout .prices .price_item
+{
+	color: #fff;
+	font-weight: 700;
+}
+
+.food_block .main_layout .prices .price_item .quantity
+{
+	color: #ccc;
+	font-weight: 500;
+}
+
+.food_block .main_layout .prices .price_item .separator::after
+{
+	content: "|";
+}
+
+.food_block .main_layout .prices .price_item .separator
+{
+	color: #ccc;
+	padding: 0 8px;
+}
+
+.food_block .tags
+{
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.food_block .tags .tag
+{
+	background-color: #424242;
+	color: #ddd;
+	padding: 5px 8px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+/* Mobile menu  */
+	.menu
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/*.menu .menu_container
+	{
+		display: block;
+	}*/
+
+	.menu li a
+	{
+		display: block;
+		padding: 15px 5px;
+	}
+
+	.menu li.subitem a
+	{
+		padding: 15px;
+	}
+
+	.toggle
+	{
+		order: 1;
+		font-size: 20px;
+	}
+
+	.item.button
+	{
+		order: 2;
+	}
+
+/*	.menu_container
+	{
+		order: 3;
+		width: 100%;
+	}*/
+
+	.item
+	{
+		/*order: 3;*/
+		width: 100%;
+		text-align: center;
+		display: none;
+	}
+
+	.active .item
+	{
+		display: block;
+	}
+
+	.button.secondary
+	{
+		border-bottom: 1px #444 solid;
+	}
+
+	/* Submenu */
+	.submenu
+	{
+		display: none;
+	}
+
+	.submenu-active .submenu
+	{
+		display: block;
+	}
+	.has-submenu > a::after
+	{
+		font-family:  "Font Awesome 5 Free";
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 900;
+		content: "\f078";
+		color: white;
+		padding-left: 5px;
+	}
+
+	.submenu a
+	{
+		padding: 10px 15px;
+	}
+
+	.submenu-active
+	{
+		background-color: #111;
+		border-radius: 3px;
+	}
+
+/*Tablet menu */
+	@media all and (min-width: 700px)
+	{
+		.menu
+		{
+			justify-content: center;
+		}
+
+		.logo
+		{
+			flex: 1;
+		}
+
+		.item.button
+		{
+			width: auto;
+			order: 1;
+			display: block;
+		}
+
+		.toggle
+		{
+			flex: 1;
+			text-align: right;
+			order: 2;
+		}
+
+		.menu li.button a
+		{
+			padding: 10px 15px;
+			margin: 5px 0;
+		}
+
+		.button a
+		{
+			background: #0000ff;
+			border: 1px royalblue solid;
+		}
+
+		.button.secondary
+		{
+			border: 0;
+		}
+
+		.button.secondary a
+		{
+			background: transparent;
+			border: 1px #0000ff solid;
+		}
+
+		.button a:hover
+		{
+			text-decoration: none;
+		}
+
+		.button:not(.secondary) a:hover
+		{
+			background: royalblue;
+			border-color: darkblue;
+		}
+	}
+
+/* Desktop menu */
+	@media all and (min-width: 960px)
+	{
+		.menu
+		{
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.logo
+		{
+			flex-basis: 0;
+			order: 1;
+			/*background-color: #555;*/
+		}
+
+/*		.menu > .menu_container
+		{
+			flex-basis: auto;
+			flex-shrink: 1;
+			flex-grow: 0;
+			background-color: grey;
+			order: 2;
+		}*/
+
+		.item
+		{
+			order: 1;
+			position: relative;
+			display: inline-block;
+			width: auto;
+		}
+
+		.button
+		{
+			order: 2;
+		}
+
+		.toggle
+		{
+			display: none;
+		}
+
+		.submenu-active .submenu
+		{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 68px;
+			background: #111;
+		}
+		
+		.menu li.subitem a
+		{
+			text-align: left;
+		}
+
+		.food_block .main_layout
+		{
+			flex-wrap: nowrap;
+			gap: 20px;
+		}
+
+		.food_block .main_layout .prices
+		{
+			border-left: 1px dashed rgba(255, 255, 255, 0.15);
+			flex-basis: 150px;
+			flex-shrink: 0;
+			flex-grow: 0;
+			flex-direction: column;
+			text-align: right;
+			justify-content: center;
+		}
+
+		.food_block .main_layout .text_and_illustration
+		{
+
+			gap: 30px;
+		}
+
+		.food_block .main_layout .text_and_illustration .text
+		{
+			order: 2;
+		}
+
+		.food_block .main_layout .text_and_illustration .illustration
+		{
+			order: 1;
+			flex-basis: 100px;
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+	}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ososhi Nikkei - Delivery de Sushi</title>
+	<!-- CSS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="../styles.css">
+	<link rel="shortcut icon" href="./_files_img/logo.jpg" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="_files_css/general_styles.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+	
+
+		body
+		{
+			background-image: url("_files_img/pattern_black_scales.png");
+			background-repeat: repeat;
+		}
+
+		h2
+		{
+			color: #222;
+			font-family: "Inter", sans-serif;
+			font-size: 5em;
+			font-weight: 900;
+			margin: 30px 0 15px;
+			line-height: 1em;
+		}
+
+		h3
+		{
+			color: #edb900;
+			font-family: "Inter", sans-serif;
+			font-size: 1.8em;
+			font-weight: 600;
+			margin: 30px 0 60px;
+			line-height: 1.2em;
+		}
+
+		#page_title
+		{
+			text-align: center;
+			padding-top: 1em;
+			margin: 0px;
+			padding-bottom: 1em;
+			color: #333;
+			font-weight: 500;
+			font-size: 1.4rem;
+			border-bottom: 10px solid #ddd;
+		}
+
+		#general_container
+		{
+			background-color: #eee;
+			padding: 0px;
+			max-width: 1300px;
+			box-sizing: border-box;
+			min-height: 100vh;
+		}
+
+		div.food_block
+		{
+			display: flex;
+			margin-top: 0px;
+			padding: 0px;
+			flex-wrap: wrap;
+
+			border-top: none;
+		}
+
+		div.food_block .illustration
+		{
+			display: flex;
+			margin: 0px 0px 20px 0px;
+			max-height: 300px;
+			overflow: hidden;
+			padding: 0px;
+			width: 100%;
+
+			order: 2;
+		
+			background: white;
+		}
+
+		div.food_block .illustration img
+		{
+			height: auto;
+			margin: 0px;
+			object-fit: cover;
+			padding: 0px;
+			width: 100%;
+		}
+
+		div.food_block .text
+		{
+			margin: 0px 20px;
+			width: 100%;
+
+			order: 1;
+		}
+
+		a.main_cta
+		{
+			display: inline-block;
+			background-color: #222;
+			color: white;
+			font-size: 1.2em;
+			padding: 0.8em;
+		}
+
+		a.main_cta i
+		{
+			margin-right: 0.5em;
+		}
+
+		a.secondary_cta
+		{
+			display: inline-block;
+			color: #999;
+			font-size: 1.2em;
+			text-decoration: underline;
+			margin: 0.5em 0px;
+		}
+
+		@media screen and (min-width: 760px)
+		{		
+			div.food_block
+			{
+				align-items: center;
+				padding: 1.2rem 0;
+				flex-wrap: nowrap;
+				padding-right: 40px;
+			}
+
+			div.food_block .text
+			{
+				margin: 0;
+				padding: 0 2rem;
+				order: 1;
+			}
+
+			div.food_block .illustration
+			{
+				flex-shrink: 0;
+				height: 300px;
+				margin: 0px;
+				width: 360px;
+				border-radius: 150px 20px 150px 60px;
+				order: 2;
+			}
+		}
+
+		@media screen and (min-width: 1000px)
+		{
+			div.food_block .text
+			{
+				padding: 0 4rem;
+			}
+
+			div.food_block .illustration
+			{
+				width: 480px;
+			}
+		}
+	</style>
+	<!-- /CSS -->
+</head>
+<body style="background-image: url('_files_img/pattern_black_scales.png')">
+
+	<nav>
+		<ul class="menu">
+			<li class="logo"><a href="index.html">Ososhi Nikkei</a>
+		
+			<li class="item has-submenu">
+				<a tabindex="0">Menú de Sushi</a>
+				<ul class="submenu">
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-clasicos">Rolls clásicos</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-vegetarianos">Rolls vegetarianos</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-especiales">Rolls especiales (Nikkei)</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-calientes">Rolls calientes (fritos)</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_nigiris">Nigiris</a></li>
+				</ul>
+				
+			</li>
+			<li class="item"><a href="otras-comidas.html">Otras comidas</a></li>
+			<!--<li class="item"><a href="catering-y-eventos.html">Catering y Eventos</a></li>-->
+			<!--<li class="item"><a href="#">Diccionario</a></li>--><!-- Por ahora va a quedar oculto, ya que no podemos armar bien el diccionario de momento. -->
+			<li class="item"><a target="_blank" href="https://wa.me/5491144038409?text=¡Hola!">Hac&eacute; tu pedido</a></li>
+			<li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+		</ul>
+	</nav>
+
+
+	<div id="general_container">
+		<!--
+		<p id="page_title">Otras comidas</p>
+		-->
+
+		<!-- Wantan Dos Continentes -->
+		<div class="food_block">
+			<div class="illustration image_1">
+				<img src="_files_img/sushi.jpg" />
+			</div>
+			<div class="text">
+				<!--
+				<h4>Wantan Dos Continentes</h4>
+				<p class="description">Relleno de ají de gallina, queso andino en especies orientales.</p>
+				<div class="prices_section">
+					<p>
+						<span class="description">Una porción</span><span class="separator"></span><span class="price">$1.400</span>
+					</p>
+				</div>
+				-->
+				<h2>Delivery<br>de Sushi</h2>
+				<h3>Preparamos tu pedido y te lo enviamos</h3>
+				<a target="_blank" href="https://wa.me/5491144038409?text=¡Hola!" class="main_cta"><i class="fa-brands fa-whatsapp"></i>Hac&eacute; tu pedido</a>
+				<div></div>
+				<a href="menu-de-sushi.html" class="secondary_cta">O mir&aacute; el men&uacute;</a>
+			</div>
+		</div>
+
+	</div>
+
+	
+
+
+
+
+	<footer>
+			<div class="container-footer-all">
+			<div class="container-body">
+				
+			<div class="colum1">
+				<h1>Mas informacion sobre la compañia</h1>
+			
+			<p>somos una familia de emprendedora hace mas de 10 años dedicado a la comida oriental con los mejores platos
+				y sabores del mundo sushi  
+				.</p>	
+			</div>
+				
+
+			
+					<div class="colum2">
+						<h1>Redes Sociales</h1>
+						
+
+						<div class="row">
+						<img src="./_files_img/facebook.png" >
+						<a class="" href="https://www.facebook.com/ososhinikkei" role="button">
+						<label>siguenos en facebook</label>	
+						</div>
+
+
+
+						<div class="row">
+							<img src="./_files_img/whatsap.png" >
+							<a class="" href="" role="button"></a>
+							<label>Contactanos por Whatsapp</label>	
+							</div>
+
+
+							<div class="row">
+								<img src="./_files_img/instragram.png" >
+								<a class="" href="https://www.instagram.com/sushiososhi/" role="button">
+								<label>siguenos en instragram</label>	
+								</div>
+							</div>
+
+								
+
+
+							 <div class="colum3">
+								<h1>informacion contactos</h1>
+
+								<div class="row2">
+								<img src="./_files_img/ubicacion.png">
+								<a class="" href="https://maps.app.goo.gl/xMMCWG9q45qisyJg8" role="button">
+										<label>Retiro-capital federal</label>
+						</div>
+
+							 
+							 
+								
+								<div class="row2">
+								<img src="">
+								<a class="" href="" role="button"></a>
+								<label>osohi_nikkei@gmail.com
+							</label>
+						</div>
+						
+
+							
+								
+								<div class="row2">
+								<img src="">
+								<a class="" href="" role="button">
+								<label>11-58961275
+							</label>
+						</div>
+					
+
+							</div>
+					
+				
+			</div>	
+			
+	</footer>
+     <div class="grupo-2">
+	<small
+	 >&copy;2023<b> - OSOSHI NIKKEI </b>  - TODOS LOS DERECHOS RESERVADOS-</small>
+					  </div>
+
+
+	<script type="text/javascript">
+	
+	</script>
+
+</body>
+</html>

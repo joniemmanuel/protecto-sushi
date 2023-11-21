@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ososhi Nikkei - Delivery de Sushi</title>
+	<!-- CSS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="_files_css/general_styles.css">
+	<!--Font Awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		body
+		{
+			background-image: url("_files_img/pattern_black_scales.png");
+			background-repeat: repeat;
+		}
+
+		#page_title
+		{
+			text-align: center;
+			padding-top: 1em;
+			margin: 0px;
+			padding-bottom: 1em;
+			color: #333;
+			font-weight: 500;
+			font-size: 1.4rem;
+			border-bottom: 10px solid #ddd;
+		}
+
+		#general_container
+		{
+			background-color: #eee;
+			padding: 0px;
+			max-width: 1000px;
+			box-sizing: border-box;
+		}
+
+		div.food_block
+		{
+			display: flex;
+			margin-top: 0px;
+			padding: 0px;
+			flex-wrap: wrap;
+
+			border-top: none;
+		}
+
+		div.food_block .illustration
+		{
+			display: flex;
+			margin: 0px 0px 20px 0px;
+			max-height: 300px;
+			overflow: hidden;
+			padding: 0px;
+			width: 100%;
+		
+			background: white;
+		}
+
+		div.food_block .illustration img
+		{
+			height: auto;
+			margin: 0px;
+			object-fit: cover;
+			padding: 0px;
+			width: 100%;
+		}
+
+		div.food_block .text
+		{
+			margin: 0px 20px;
+			width: 100%;
+		}
+
+		div.food_block .text > h4
+		{
+			color: #222;
+			font-size: 1.6rem;
+			font-weight: 800;
+		}
+
+		div.food_block .text > p.description
+		{
+			margin: 1rem 0;
+			padding-bottom: 1rem;
+			width: 100%;
+
+			border-bottom: 2px dashed #ccc;
+
+			color: #888;
+			font-size: 1.1rem;
+			font-weight: 500;
+		}
+
+		div.food_block .text .prices_section
+		{
+			width: 100%;
+
+			font-size: 1.1rem;
+			font-weight: 500;
+		}
+
+		div.food_block .text .prices_section .description
+		{
+			color: #888;
+		}
+
+		div.food_block .text .prices_section .separator
+		{
+			color: #888;
+			padding: 0 0.5rem;
+		}
+
+		div.food_block .text .prices_section .separator::after
+		{
+			content: "|";
+		}
+
+		div.food_block .text .prices_section .price
+		{
+			color: #0081E2;
+			font-weight: 800;
+		}
+
+		div.food_block .item_separator
+		{
+			display: block;
+			height: 30px;
+			margin-bottom: 0px;
+			margin-top: 30px;
+			opacity: 0.7;
+			width: 100%;
+
+			background-image: url("_files_img/pattern_60degrees.png");
+			background-position: 0px 0px;
+			background-repeat: repeat repeat;
+		}
+
+		@media screen and (min-width: 760px)
+		{
+			#page_title
+			{
+				border-bottom-width: 4px;
+			}
+			
+			div.food_block
+			{
+				align-items: center;
+				padding: 1.2rem 0;
+				flex-wrap: nowrap;
+			}
+
+			div.food_block .text
+			{
+				margin: 0;
+				padding: 0 2rem;
+			}
+
+			div.food_block .illustration
+			{
+				flex-shrink: 0;
+				height: 300px;
+				margin: 0px;
+				width: 360px;
+			}
+
+			/* impares */
+			div.food_block:nth-child(2n) .text
+			{
+				order: 1;
+			}
+
+			div.food_block:nth-child(2n) .illustration
+			{
+				border-radius: 150px 0 0 150px;
+				order: 2;
+			}
+
+			/* pares */
+			div.food_block:nth-child(2n+1) .text
+			{
+				order: 2;
+			}
+
+			div.food_block:nth-child(2n+1) .illustration
+			{
+				border-radius: 0 150px 150px 0;
+				order: 1;
+			}
+
+			div.food_block .item_separator
+			{
+				display: none;
+			}
+		}
+
+		@media screen and (min-width: 1000px)
+		{
+			div.food_block .item_separator
+			{
+				align-self: stretch;
+				display: flex;
+				height: auto;
+				margin: 0px;
+				order: 1;
+				width: 40px;
+
+				background-color: gray;
+			}
+
+			div.food_block .text
+			{
+				padding: 0 4rem;
+			}
+
+			/* impares */
+			div.food_block:nth-child(2n) .item_separator
+			{
+				order: 1;
+			}
+
+			div.food_block:nth-child(2n) .text
+			{
+				order: 2;
+			}
+
+			div.food_block:nth-child(2n) .illustration
+			{
+				order: 3;
+			}
+
+			/* pares */
+			div.food_block:nth-child(2n+1) .item_separator
+			{
+				order: 3;
+			}
+			
+			div.food_block:nth-child(2n+1) .text
+			{
+				order: 2;
+			}
+
+			div.food_block:nth-child(2n+1) .illustration
+			{
+				order: 1;
+			}
+		}
+	</style>
+	
+	<!-- /CSS -->
+</head>
+<body>
+
+	<nav>
+		<ul class="menu">
+			<li class="logo"><a href="index.html">Ososhi Nikkei</a></li>
+
+			<li class="item has-submenu">
+				<a tabindex="0">Menú de Sushi</a>
+				<ul class="submenu">
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-clasicos">Rolls clásicos</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-vegetarianos">Rolls vegetarianos</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-especiales">Rolls especiales (Nikkei)</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_rolls-calientes">Rolls calientes (fritos)</a></li>
+					<li class="subitem"><a href="menu-de-sushi.html#category_nigiris">Nigiris</a></li>
+				</ul>
+			</li>
+			<li class="item"><a href="otras-comidas.html">Otras comidas</a></li>
+			<!--<li class="item"><a href="catering-y-eventos.html">Catering y Eventos</a></li>-->
+			<!--<li class="item"><a href="#">Diccionario</a></li>--><!-- Por ahora va a quedar oculto, ya que no podemos armar bien el diccionario de momento. -->
+			<li class="item"><a target="_blank" href="https://wa.me/5491144038409?text=¡Hola!">Hac&eacute; tu pedido</a></li>
+			<li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+		</ul>
+	</nav>
+
+	<div id="general_container">
+		<p id="page_title">Otras comidas</p>
+
+		<!-- Wantan Dos Continentes -->
+		<div class="food_block">
+			<div class="illustration image_1">
+				<img src="_files_img/sushi.jpg" />
+			</div>
+			<div class="text">
+				<h4>Pr&oacute;ximamente, otras comidas...</h4>
+				<p class="description">-</p>
+				<div class="prices_section">
+					<p>
+						<span class="description">Precio por porción</span><span class="separator"></span><span class="price">$-</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_separator"></div>
+		</div>
+
+		<!-- Wantan Dos Continentes -->
+		<div class="food_block" style="display:none;">
+			<div class="illustration">
+				<img src="_files_img/sushi.jpg" />
+			</div>
+			<div class="text">
+				<h4>Wantan Dos Continentes</h4>
+				<p class="description">Relleno de ají de gallina, queso andino en especies orientales. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies orientales. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies. Relleno de ají de gallina, queso andino en especies.</p>
+				<div class="prices_section">
+					<p>
+						<span class="description">Una porción</span><span class="separator"></span><span class="price">$1.400</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_separator"></div>
+		</div>
+
+		<!-- Wantan Dos Continentes -->
+		<div class="food_block" style="display:none;">
+			<div class="illustration">
+				<img src="_files_img/sushi.jpg" />
+			</div>
+			<div class="text">
+				<h4>Wantan Dos Continentes</h4>
+				<p class="description">Relleno de ají de gallina, queso andino en especies orientales. Relleno de ají de gallina, queso andino en especies.</p>
+				<div class="prices_section">
+					<p>
+						<span class="description">Una porción</span><span class="separator"></span><span class="price">$1.400</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_separator"></div>
+		</div>
+
+		<!-- Wantan Dos Continentes -->
+		<div class="food_block" style="display:none;">
+			<div class="illustration">
+				<img src="_files_img/sushi.jpg" />
+			</div>
+			<div class="text">
+				<h4>Wantan Dos Continentes</h4>
+				<p class="description">Relleno de ají de gallina, queso andino en especies orientales. Relleno de ají de gallina, queso andino en especies.</p>
+				<div class="prices_section">
+					<p>
+						<span class="description">Una porción</span><span class="separator"></span><span class="price">$1.400</span>
+					</p>
+				</div>
+			</div>
+			<div class="item_separator"></div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript">
+		// Toggle mobile menu
+		const toggle = document.querySelector('.toggle');
+		const menu = document.querySelector('.menu');
+
+		function toggleMenu()
+		{
+			if (menu.classList.contains("active"))
+			{
+				menu.classList.remove("active");
+				toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+			}
+			else
+			{
+				menu.classList.add("active");
+				toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+			}
+		}
+
+		toggle.addEventListener("click", toggleMenu, false);
+
+		// Submenu
+		const items = document.querySelectorAll('.item');
+
+		function toggleItem()
+		{
+			if(this.classList.contains("submenu-active"))
+			{
+				this.classList.remove("submenu-active");
+			}
+			else if (menu.querySelector(".submenu-active"))
+			{
+				menu.querySelector(".submenu-active").classList.remove("submenu-active");
+				this.classList.add("submenu-active");
+			}
+			else
+			{
+				this.classList.add("submenu-active");
+			}
+		}
+
+		for (let item of items)
+		{
+			if (item.querySelector('.submenu'))
+			{
+				item.addEventListener('click', toggleItem, false);
+				item.addEventListener('keypress', toggleItem, false);
+			}
+		}
+
+		// Close submenu from anywhere in the page
+		function closeSubmenu(e)
+		{
+			let isClickInside = menu.contains(e.target);
+
+			if(!isClickInside && menu.querySelector('.submenu-active'))
+			{
+				menu.querySelector('.submenu-active').classList.remove('submenu-active');
+			}
+		}
+
+		document.addEventListener('click', closeSubmenu, false);
+	</script>
+</body>
+</html>

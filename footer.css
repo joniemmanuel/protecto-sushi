@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+footer{
+    width: 100%;
+    background: #202020;
+    color: white;
+    
+}
+
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    
+
+
+}
+
+.container-body{
+display: flex;
+justify-content: center;
+
+}
+
+.colum1{
+    max-width: 400px;
+    padding: 10px;
+}
+
+.colum1 h1{
+    font-size: 20px;
+    color: white;
+}
+.colum1 h1:hover{
+    color: #C7C7C7;
+}
+
+.colum1 p{
+    font-size:  14px;
+    color: white;
+    margin-top: 20px;
+    
+}
+
+
+.colum2{
+    
+    max-width: 400px;
+    padding: 10px;
+    
+}
+
+
+
+
+.colum2 h1{
+    font-size: 20px;
+    color: white;
+    
+   
+}
+
+.colum2 h1:hover{
+    color: #C7C7C7;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 30px;
+    height: 30px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 10px;
+    color:  #C7C7C7;
+    cursor: pointer;
+}
+
+.colum3{
+    max-width: 400px;
+    padding: 10px;
+    
+    }
+
+.colum3 h1{
+    font-size: 20px;
+    color: white;
+}
+
+.colum3 h1:hover{
+    color:#C7C7C7
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 20px;
+    margin-left: 20px;
+    max-width: 170px;
+}
+
+.cointainer-footer{
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+
+}
+
+small{
+    justify-content: center;
+    display: flex;
+    background-color: #C7C7C7;
+    font-size: medium;
+    color: black;
+    font-weight: bold;
+
+}
+
+@media screen and (min-witdh:760px){
+    .container-body{
+        flex-wrap: wrap;
+    }
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
+
+
+.logo1{
+    width:80px;
+    height: 80px;
+    padding:2%;
+    padding-top: 1px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    
+
+
+}
+
+small{
+    background-color: black;
+    color: white;
+}
+
+
